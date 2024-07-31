@@ -103,9 +103,9 @@ Must be one of `mocha`, `macchiato`, `frappe`, or `latte`."
                                      (surface2  . "#363940")
                                      (surface1  . "#2e3138")
                                      (surface0  . "#26282e")
-                                     (base      . "#3c4048")
+                                     (base      . "#16181a")
                                      (mantle    . "#1e2124")
-                                     (crust     . "#16181a"))
+                                     (crust     . "#3c4048"))
   "Colors used for cyberdream-mocha."
   :tag "Mocha Colors"
   :options '(rosewater flamingo pink mauve red maroon peach yellow green teal sky sapphire blue lavender text subtext1 subtext0 overlay2 overlay1 overlay0 surface2 surface1 surface0 base mantle crust)
