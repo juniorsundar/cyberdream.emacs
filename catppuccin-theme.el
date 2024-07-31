@@ -1,4 +1,4 @@
-;;; catppuccin-theme.el --- Catppuccin for Emacs - 🍄 Soothing pastel theme for Emacs -*- lexical-binding: t; no-byte-compile: nil; -*-
+;;; cyberdream-theme.el --- cyberdream for Emacs - 🍄 Soothing pastel theme for Emacs -*- lexical-binding: t; no-byte-compile: nil; -*-
 
 ;; Copyright 2022-present, All rights reserved
 ;;
@@ -9,78 +9,78 @@
 ;; Original-Author: film42
 ;; Version: 1.0.0
 ;; Package-Requires: ((emacs "25.1"))
-;; URL: https://github.com/catppuccin/emacs
+;; URL: https://github.com/cyberdream/emacs
 
 ;;; Commentary:
 
 ;; 🍄 Soothing pastel theme for Emacs
 
 ;;; Code:
-(deftheme catppuccin)
+(deftheme cyberdream)
 
 ;;;; Configuration options:
 
-(defgroup catppuccin nil
-  "Catppuccin theme options.
+(defgroup cyberdream nil
+  "cyberdream theme options.
 
 The theme has to be reloaded after changing anything in this group."
   :group 'faces)
 
-(defcustom catppuccin-enlarge-headings t
+(defcustom cyberdream-enlarge-headings t
   "Use different font sizes for some headings and titles."
   :type 'boolean
-  :group 'catppuccin)
+  :group 'cyberdream)
 
-(defcustom catppuccin-height-title-1 1.3
+(defcustom cyberdream-height-title-1 1.3
   "Header 1 font size."
   :type 'number
-  :group 'catppuccin)
+  :group 'cyberdream)
 
-(defcustom catppuccin-height-title-2 1.2
+(defcustom cyberdream-height-title-2 1.2
   "Header 2 font size."
   :type 'number
-  :group 'catppuccin)
+  :group 'cyberdream)
 
-(defcustom catppuccin-height-title-3 1.2
+(defcustom cyberdream-height-title-3 1.2
   "Header 3 font size."
   :type 'number
-  :group 'catppuccin)
+  :group 'cyberdream)
 
-(defcustom catppuccin-height-doc-title 1.44
+(defcustom cyberdream-height-doc-title 1.44
   "Documentation Title font size."
   :type 'number
-  :group 'catppuccin)
+  :group 'cyberdream)
 
-(defcustom catppuccin-highlight-matches nil
+(defcustom cyberdream-highlight-matches nil
   "Use background color to make highlighted matches more visible."
   :type 'boolean
-  :group 'catppuccin)
+  :group 'cyberdream)
 
-(defcustom catppuccin-italic-comments nil
+(defcustom cyberdream-italic-comments nil
   "Use :slant italic for comments."
   :type 'boolean
-  :group 'catppuccin)
+  :group 'cyberdream)
 
-(defcustom catppuccin-italic-blockquotes t
+(defcustom cyberdream-italic-blockquotes t
   "Use :slant italic for blockquotes in markdown and org."
   :type 'boolean
-  :group 'catppuccin)
+  :group 'cyberdream)
 
-(defcustom catppuccin-italic-variables nil
+(defcustom cyberdream-italic-variables nil
   "Use :slant italic for variables."
   :type 'boolean
-  :group 'catppuccin)
+  :group 'cyberdream)
 
-(defcustom catppuccin-flavor 'mocha
-  "The flavor to use for the Catppuccin theme.
+(defcustom cyberdream-flavor 'mocha
+  "The flavor to use for the cyberdream theme.
 Must be one of `mocha`, `macchiato`, `frappe`, or `latte`."
   :type '(choice (const :tag "Mocha" mocha)
                  (const :tag "Macchiato" macchiato)
                  (const :tag "Frappe" frappe)
                  (const :tag "Latte" latte))
-  :group 'catppuccin)
+  :group 'cyberdream)
 
-(defcustom catppuccin-mocha-colors '((rosewater . "#ffd1dc")
+(defcustom cyberdream-mocha-colors '((rosewater . "#ffd1dc")
                                      (flamingo  . "#ff9f9f")
                                      (pink      . "#ff5ea0")
                                      (mauve     . "#bd5eff")
@@ -106,13 +106,13 @@ Must be one of `mocha`, `macchiato`, `frappe`, or `latte`."
                                      (base      . "#3c4048")
                                      (mantle    . "#1e2124")
                                      (crust     . "#16181a"))
-  "Colors used for catppuccin-mocha."
+  "Colors used for cyberdream-mocha."
   :tag "Mocha Colors"
   :options '(rosewater flamingo pink mauve red maroon peach yellow green teal sky sapphire blue lavender text subtext1 subtext0 overlay2 overlay1 overlay0 surface2 surface1 surface0 base mantle crust)
   :type '(alist :key-type symbol :value-type string)
-  :group 'catppuccin)
+  :group 'cyberdream)
 
-(defcustom catppuccin-macchiato-colors '((rosewater . "#f4dbd6")
+(defcustom cyberdream-macchiato-colors '((rosewater . "#f4dbd6")
                                          (flamingo  . "#f0c6c6")
                                          (pink      . "#f5bde6")
                                          (mauve     . "#c6a0f6")
@@ -138,13 +138,13 @@ Must be one of `mocha`, `macchiato`, `frappe`, or `latte`."
                                          (base      . "#24273a")
                                          (mantle    . "#1e2030")
                                          (crust     . "#181926"))
-  "Colors used for catppuccin-macchiato."
+  "Colors used for cyberdream-macchiato."
   :tag "Macchiato Colors"
   :options '(rosewater flamingo pink mauve red maroon peach yellow green teal sky sapphire blue lavender text subtext1 subtext0 overlay2 overlay1 overlay0 surface2 surface1 surface0 base mantle crust)
   :type '(alist :key-type symbol :value-type string)
-  :group 'catppuccin)
+  :group 'cyberdream)
 
-(defcustom catppuccin-frappe-colors '((rosewater . "#f2d5cf")
+(defcustom cyberdream-frappe-colors '((rosewater . "#f2d5cf")
                                       (flamingo  . "#eebebe")
                                       (pink      . "#f4b8e4")
                                       (mauve     . "#ca9ee6")
@@ -170,13 +170,13 @@ Must be one of `mocha`, `macchiato`, `frappe`, or `latte`."
                                       (base      . "#303446")
                                       (mantle    . "#292c3c")
                                       (crust     . "#232634"))
-  "Colors used for catppuccin-frappe."
+  "Colors used for cyberdream-frappe."
   :tag "Frappe Colors"
   :options '(rosewater flamingo pink mauve red maroon peach yellow green teal sky sapphire blue lavender text subtext1 subtext0 overlay2 overlay1 overlay0 surface2 surface1 surface0 base mantle crust)
   :type '(alist :key-type symbol :value-type string)
-  :group 'catppuccin)
+  :group 'cyberdream)
 
-(defcustom catppuccin-latte-colors '((rosewater . "#dc8a78")
+(defcustom cyberdream-latte-colors '((rosewater . "#dc8a78")
                                      (flamingo  . "#dd7878")
                                      (pink      . "#ea76cb")
                                      (mauve     . "#8839ef")
@@ -202,15 +202,15 @@ Must be one of `mocha`, `macchiato`, `frappe`, or `latte`."
                                      (base      . "#eff1f5")
                                      (mantle    . "#e6e9ef")
                                      (crust     . "#dce0e8"))
-  "Colors used for catppuccin-latte."
+  "Colors used for cyberdream-latte."
   :tag "Latte Colors"
   :options '(rosewater flamingo pink mauve red maroon peach yellow green teal sky sapphire blue lavender text subtext1 subtext0 overlay2 overlay1 overlay0 surface2 surface1 surface0 base mantle crust)
   :type '(alist :key-type symbol :value-type string)
-  :group 'catppuccin)
+  :group 'cyberdream)
 
 ;;;; Internal functions
 
-(defun catppuccin-quantize-color (color)
+(defun cyberdream-quantize-color (color)
   "Quantize COLOR to a 256 color palette."
   (let ((i 1)
         (str "#"))
@@ -237,13 +237,13 @@ Must be one of `mocha`, `macchiato`, `frappe`, or `latte`."
                      (format "#%02x%02x%02x" r g b)))
        (rnd (lambda (n) (round (+ .5 n)))))
 
-  (defun catppuccin-lighten (color value)
+  (defun cyberdream-lighten (color value)
     "Lighten COLOR by VALUE%."
     (let* ((factor (/ value 100.0)))
       (apply rgb-to-hex (mapcar (lambda (v) (funcall rnd (min 255 (+ (* (- 255 v) factor) v))))
               (funcall hex-to-rgb color)))))
 
-  (defun catppuccin-darken (color value)
+  (defun cyberdream-darken (color value)
     "Darken COLOR by VALUE%."
     (let* ((factor (/ value 100.0)))
       (apply rgb-to-hex (mapcar (lambda (v) (floor (* (- 1 factor) v)))
@@ -251,77 +251,77 @@ Must be one of `mocha`, `macchiato`, `frappe`, or `latte`."
 
 ;;; User functions
 
-(defun catppuccin-reload ()
-  "Reload the Catppuccin theme, useful for after having set custom colors with `catppuccin-set-color`."
+(defun cyberdream-reload ()
+  "Reload the cyberdream theme, useful for after having set custom colors with `cyberdream-set-color`."
   (interactive)
-  (disable-theme 'catppuccin)
-  (load-theme 'catppuccin t))
+  (disable-theme 'cyberdream)
+  (load-theme 'cyberdream t))
 
-(defun catppuccin-load-flavor (flavor)
+(defun cyberdream-load-flavor (flavor)
   "Set the desired FLAVOR or choose one from a list if called interactively.
 
 If called non-interactively, the FLAVOR must be one of 'frappe, 'latte, 'macchiato, or 'mocha."
   (interactive
    (list (intern (completing-read
-                  "Choose a catppuccin theme flavor: "
+                  "Choose a cyberdream theme flavor: "
                   '(frappe latte macchiato mocha)
                   nil   ;; predicate
                   t)))) ;; require-match
-    (setq catppuccin-flavor flavor)
-    (catppuccin-reload)
-    (message "Catppuccin flavor now %s" flavor))
+    (setq cyberdream-flavor flavor)
+    (cyberdream-reload)
+    (message "cyberdream flavor now %s" flavor))
 
-(defun catppuccin-set-color (color value &optional flavor)
+(defun cyberdream-set-color (color value &optional flavor)
   "Set the COLOR of FLAVOR or the current flavor to VALUE."
   (interactive "SChange color: \nsSet %s to: ")
-  (setcdr (assoc color (symbol-value (intern-soft (concat "catppuccin-" (symbol-name (or flavor catppuccin-flavor)) "-colors")))) value))
+  (setcdr (assoc color (symbol-value (intern-soft (concat "cyberdream-" (symbol-name (or flavor cyberdream-flavor)) "-colors")))) value))
 
-(defun catppuccin-get-color (color &optional flavor)
+(defun cyberdream-get-color (color &optional flavor)
   "Get the COLOR of FLAVOR or the current flavor."
   (interactive "SThe color to get: ")
-  (alist-get color (symbol-value (intern-soft (concat "catppuccin-" (symbol-name (or flavor catppuccin-flavor)) "-colors")))))
+  (alist-get color (symbol-value (intern-soft (concat "cyberdream-" (symbol-name (or flavor cyberdream-flavor)) "-colors")))))
 
 ;;;; Theme definition:
 (let ((colors '((undef     "#ff00ff" "#ff00ff")
-                (ctp-rosewater        (catppuccin-get-color 'rosewater) (catppuccin-quantize-color (catppuccin-get-color 'rosewater)))
-                (ctp-flamingo         (catppuccin-get-color 'flamingo) (catppuccin-quantize-color (catppuccin-get-color 'flamingo)))
-                (ctp-pink             (catppuccin-get-color 'pink) (catppuccin-quantize-color (catppuccin-get-color 'pink)))
-                (ctp-mauve            (catppuccin-get-color 'mauve) (catppuccin-quantize-color (catppuccin-get-color 'mauve)))
-                (ctp-red              (catppuccin-get-color 'red) (catppuccin-quantize-color (catppuccin-get-color 'red)))
-                (ctp-maroon           (catppuccin-get-color 'maroon) (catppuccin-quantize-color (catppuccin-get-color 'maroon)))
-                (ctp-peach            (catppuccin-get-color 'peach) (catppuccin-quantize-color (catppuccin-get-color 'peach)))
-                (ctp-yellow           (catppuccin-get-color 'yellow) (catppuccin-quantize-color (catppuccin-get-color 'yellow)))
-                (ctp-green            (catppuccin-get-color 'green) (catppuccin-quantize-color (catppuccin-get-color 'green)))
-                (ctp-teal             (catppuccin-get-color 'teal) (catppuccin-quantize-color (catppuccin-get-color 'teal)))
-                (ctp-sky              (catppuccin-get-color 'sky) (catppuccin-quantize-color (catppuccin-get-color 'sky)))
-                (ctp-sapphire         (catppuccin-get-color 'sapphire) (catppuccin-quantize-color (catppuccin-get-color 'sapphire)))
-                (ctp-blue             (catppuccin-get-color 'blue) (catppuccin-quantize-color (catppuccin-get-color 'blue)))
-                (ctp-lavender         (catppuccin-get-color 'lavender) (catppuccin-quantize-color (catppuccin-get-color 'lavender)))
-                (ctp-text             (catppuccin-get-color 'text) (catppuccin-quantize-color (catppuccin-get-color 'text)))
-                (ctp-subtext1         (catppuccin-get-color 'subtext1) (catppuccin-quantize-color (catppuccin-get-color 'subtext1)))
-                (ctp-subtext0         (catppuccin-get-color 'subtext0) (catppuccin-quantize-color (catppuccin-get-color 'subtext0)))
-                (ctp-overlay2         (catppuccin-get-color 'overlay2) (catppuccin-quantize-color (catppuccin-get-color 'overlay2)))
-                (ctp-overlay1         (catppuccin-get-color 'overlay1) (catppuccin-quantize-color (catppuccin-get-color 'overlay1)))
-                (ctp-overlay0         (catppuccin-get-color 'overlay0) (catppuccin-quantize-color (catppuccin-get-color 'overlay0)))
-                (ctp-surface2         (catppuccin-get-color 'surface2) (catppuccin-quantize-color (catppuccin-get-color 'surface2)))
-                (ctp-surface1         (catppuccin-get-color 'surface1) (catppuccin-quantize-color (catppuccin-get-color 'surface1)))
-                (ctp-surface0         (catppuccin-get-color 'surface0) (catppuccin-quantize-color (catppuccin-get-color 'surface0)))
-                (ctp-base             (catppuccin-get-color 'base) (catppuccin-quantize-color (catppuccin-get-color 'base)))
-                (ctp-mantle           (catppuccin-get-color 'mantle) (catppuccin-quantize-color (catppuccin-get-color 'mantle)))
-                (ctp-crust            (catppuccin-get-color 'crust) (catppuccin-quantize-color (catppuccin-get-color 'crust)))
+                (ctp-rosewater        (cyberdream-get-color 'rosewater) (cyberdream-quantize-color (cyberdream-get-color 'rosewater)))
+                (ctp-flamingo         (cyberdream-get-color 'flamingo) (cyberdream-quantize-color (cyberdream-get-color 'flamingo)))
+                (ctp-pink             (cyberdream-get-color 'pink) (cyberdream-quantize-color (cyberdream-get-color 'pink)))
+                (ctp-mauve            (cyberdream-get-color 'mauve) (cyberdream-quantize-color (cyberdream-get-color 'mauve)))
+                (ctp-red              (cyberdream-get-color 'red) (cyberdream-quantize-color (cyberdream-get-color 'red)))
+                (ctp-maroon           (cyberdream-get-color 'maroon) (cyberdream-quantize-color (cyberdream-get-color 'maroon)))
+                (ctp-peach            (cyberdream-get-color 'peach) (cyberdream-quantize-color (cyberdream-get-color 'peach)))
+                (ctp-yellow           (cyberdream-get-color 'yellow) (cyberdream-quantize-color (cyberdream-get-color 'yellow)))
+                (ctp-green            (cyberdream-get-color 'green) (cyberdream-quantize-color (cyberdream-get-color 'green)))
+                (ctp-teal             (cyberdream-get-color 'teal) (cyberdream-quantize-color (cyberdream-get-color 'teal)))
+                (ctp-sky              (cyberdream-get-color 'sky) (cyberdream-quantize-color (cyberdream-get-color 'sky)))
+                (ctp-sapphire         (cyberdream-get-color 'sapphire) (cyberdream-quantize-color (cyberdream-get-color 'sapphire)))
+                (ctp-blue             (cyberdream-get-color 'blue) (cyberdream-quantize-color (cyberdream-get-color 'blue)))
+                (ctp-lavender         (cyberdream-get-color 'lavender) (cyberdream-quantize-color (cyberdream-get-color 'lavender)))
+                (ctp-text             (cyberdream-get-color 'text) (cyberdream-quantize-color (cyberdream-get-color 'text)))
+                (ctp-subtext1         (cyberdream-get-color 'subtext1) (cyberdream-quantize-color (cyberdream-get-color 'subtext1)))
+                (ctp-subtext0         (cyberdream-get-color 'subtext0) (cyberdream-quantize-color (cyberdream-get-color 'subtext0)))
+                (ctp-overlay2         (cyberdream-get-color 'overlay2) (cyberdream-quantize-color (cyberdream-get-color 'overlay2)))
+                (ctp-overlay1         (cyberdream-get-color 'overlay1) (cyberdream-quantize-color (cyberdream-get-color 'overlay1)))
+                (ctp-overlay0         (cyberdream-get-color 'overlay0) (cyberdream-quantize-color (cyberdream-get-color 'overlay0)))
+                (ctp-surface2         (cyberdream-get-color 'surface2) (cyberdream-quantize-color (cyberdream-get-color 'surface2)))
+                (ctp-surface1         (cyberdream-get-color 'surface1) (cyberdream-quantize-color (cyberdream-get-color 'surface1)))
+                (ctp-surface0         (cyberdream-get-color 'surface0) (cyberdream-quantize-color (cyberdream-get-color 'surface0)))
+                (ctp-base             (cyberdream-get-color 'base) (cyberdream-quantize-color (cyberdream-get-color 'base)))
+                (ctp-mantle           (cyberdream-get-color 'mantle) (cyberdream-quantize-color (cyberdream-get-color 'mantle)))
+                (ctp-crust            (cyberdream-get-color 'crust) (cyberdream-quantize-color (cyberdream-get-color 'crust)))
 
-                (ctp-current          (if (eq catppuccin-flavor 'latte)
-                                          (catppuccin-darken (catppuccin-get-color 'base) 5)
-                                        (catppuccin-lighten (catppuccin-get-color 'base) 5))
-                                      (catppuccin-quantize-color (if (eq catppuccin-flavor 'latte)
-                                                                     (catppuccin-darken (catppuccin-get-color 'base) 5)
-                                                                   (catppuccin-lighten (catppuccin-get-color 'base) 5))))
-                (ctp-selection          (if (eq catppuccin-flavor 'latte)
-                                          (catppuccin-darken (catppuccin-get-color 'base) 12)
-                                        (catppuccin-lighten (catppuccin-get-color 'base) 17))
-                                      (catppuccin-quantize-color (if (eq catppuccin-flavor 'latte)
-                                                                     (catppuccin-darken (catppuccin-get-color 'base) 12)
-                                                                   (catppuccin-lighten (catppuccin-get-color 'base) 17))))))
+                (ctp-current          (if (eq cyberdream-flavor 'latte)
+                                          (cyberdream-darken (cyberdream-get-color 'base) 5)
+                                        (cyberdream-lighten (cyberdream-get-color 'base) 5))
+                                      (cyberdream-quantize-color (if (eq cyberdream-flavor 'latte)
+                                                                     (cyberdream-darken (cyberdream-get-color 'base) 5)
+                                                                   (cyberdream-lighten (cyberdream-get-color 'base) 5))))
+                (ctp-selection          (if (eq cyberdream-flavor 'latte)
+                                          (cyberdream-darken (cyberdream-get-color 'base) 12)
+                                        (cyberdream-lighten (cyberdream-get-color 'base) 17))
+                                      (cyberdream-quantize-color (if (eq cyberdream-flavor 'latte)
+                                                                     (cyberdream-darken (cyberdream-get-color 'base) 12)
+                                                                   (cyberdream-lighten (cyberdream-get-color 'base) 17))))))
       (faces '(;; default / basic faces
                (cursor :background ,ctp-rosewater) ;; If you want to change this to a nicer color you can do so by swapping "ctp-rosewater" with another colour var like "ctp-red"
                (default :background ,ctp-base :foreground ,ctp-text)
@@ -379,7 +379,7 @@ If called non-interactively, the FLAVOR must be one of 'frappe, 'latte, 'macchia
                ;; syntax / font-lock
                (font-lock-bracket-face :foreground ,ctp-overlay2)
                (font-lock-builtin-face :foreground ,ctp-red)
-               (font-lock-comment-face ,@(if catppuccin-italic-comments
+               (font-lock-comment-face ,@(if cyberdream-italic-comments
                                              '(:inherit (shadow italic))
                                            '(:inherit shadow)))
                (font-lock-comment-delimiter-face :inherit shadow)
@@ -399,9 +399,9 @@ If called non-interactively, the FLAVOR must be one of 'frappe, 'latte, 'macchia
                (font-lock-regexp-grouping-construct :foreground ,undef)
                (font-lock-string-face :foreground ,ctp-green)
                (font-lock-type-face :foreground ,ctp-yellow)
-               (font-lock-variable-name-face :foreground ,ctp-text ,@(when catppuccin-italic-variables
+               (font-lock-variable-name-face :foreground ,ctp-text ,@(when cyberdream-italic-variables
                                                                        '(:inherit italic)))
-               (font-lock-variable-use-face :foreground ,ctp-text ,@(when catppuccin-italic-variables
+               (font-lock-variable-use-face :foreground ,ctp-text ,@(when cyberdream-italic-variables
                                                                       '(:inherit italic)))
                (font-lock-warning-face :inherit warning)
                ;; auto-complete
@@ -572,14 +572,14 @@ If called non-interactively, the FLAVOR must be one of 'frappe, 'latte, 'macchia
                (elfeed-log-debug-level-face :weight bold)
                ;; elpher
                (elpher-gemini-heading1 :weight bold :foreground ,ctp-blue
-                                       ,@(when catppuccin-enlarge-headings
-                                           (list :height catppuccin-height-title-1)))
+                                       ,@(when cyberdream-enlarge-headings
+                                           (list :height cyberdream-height-title-1)))
                (elpher-gemini-heading2 :foreground ,ctp-blue
-                                       ,@(when catppuccin-enlarge-headings
-                                           (list :height catppuccin-height-title-2)))
+                                       ,@(when cyberdream-enlarge-headings
+                                           (list :height cyberdream-height-title-2)))
                (elpher-gemini-heading3 :foreground ,ctp-blue
-                                       ,@(when catppuccin-enlarge-headings
-                                           (list :height catppuccin-height-title-3)))
+                                       ,@(when cyberdream-enlarge-headings
+                                           (list :height cyberdream-height-title-3)))
                (elpher-gemini-preformatted :inherit fixed-pitch
                                            :foreground ,ctp-green)
                ;; erc
@@ -654,14 +654,14 @@ If called non-interactively, the FLAVOR must be one of 'frappe, 'latte, 'macchia
                ;; TODO: More latex faces to be themed, especially sections
                ;; gemini
                (gemini-heading-face-1 :weight bold :foreground ,ctp-blue
-                                      ,@(when catppuccin-enlarge-headings
-                                          (list :height catppuccin-height-title-1)))
+                                      ,@(when cyberdream-enlarge-headings
+                                          (list :height cyberdream-height-title-1)))
                (gemini-heading-face-2 :foreground ,ctp-blue
-                                      ,@(when catppuccin-enlarge-headings
-                                          (list :height catppuccin-height-title-2)))
+                                      ,@(when cyberdream-enlarge-headings
+                                          (list :height cyberdream-height-title-2)))
                (gemini-heading-face-3 :foreground ,ctp-blue
-                                      ,@(when catppuccin-enlarge-headings
-                                          (list :height catppuccin-height-title-3)))
+                                      ,@(when cyberdream-enlarge-headings
+                                          (list :height cyberdream-height-title-3)))
                (gemini-heading-face-rest :foreground ,ctp-blue)
                (gemini-quote-face :foreground ,ctp-green)
                ;; gnus
@@ -865,23 +865,23 @@ If called non-interactively, the FLAVOR must be one of 'frappe, 'latte, 'macchia
                (magit-process-ok :foreground ,ctp-green :weight bold)
                ;; markdown
                (markdown-blockquote-face :foreground ,ctp-green)
-               (markdown-blockquote-face :extend t :background ,ctp-mantle :foreground ,ctp-green ,@(when catppuccin-italic-blockquotes
+               (markdown-blockquote-face :extend t :background ,ctp-mantle :foreground ,ctp-green ,@(when cyberdream-italic-blockquotes
                                                                                                       '(:slant italic)))
                (markdown-code-face :foreground ,ctp-text)
                (markdown-footnote-face :foreground ,ctp-yellow)
                (markdown-header-face :weight normal)
                (markdown-header-face-1
                 :foreground ,ctp-red
-                ,@(when catppuccin-enlarge-headings
-                    (list :height catppuccin-height-title-1)))
+                ,@(when cyberdream-enlarge-headings
+                    (list :height cyberdream-height-title-1)))
                (markdown-header-face-2
                 :foreground ,ctp-peach
-                ,@(when catppuccin-enlarge-headings
-                    (list :height catppuccin-height-title-2)))
+                ,@(when cyberdream-enlarge-headings
+                    (list :height cyberdream-height-title-2)))
                (markdown-header-face-3
                 :foreground ,ctp-yellow
-                ,@(when catppuccin-enlarge-headings
-                    (list :height catppuccin-height-title-3)))
+                ,@(when cyberdream-enlarge-headings
+                    (list :height cyberdream-height-title-3)))
                (markdown-header-face-4 :foreground ,ctp-green)
                (markdown-header-face-5 :foreground ,ctp-sapphire)
                (markdown-header-face-6 :foreground ,ctp-lavender)
@@ -975,8 +975,8 @@ If called non-interactively, the FLAVOR must be one of 'frappe, 'latte, 'macchia
                (org-document-info :foreground ,ctp-sapphire)
                (org-document-info-keyword :inherit font-lock-comment-face)
                (org-document-title :weight bold :foreground ,ctp-blue
-                                   ,@(when catppuccin-enlarge-headings
-                                       (list :height catppuccin-height-doc-title)))
+                                   ,@(when cyberdream-enlarge-headings
+                                       (list :height cyberdream-height-doc-title)))
                (org-done :inherit font-lock-comment-face)
                (org-ellipsis :inherit font-lock-comment-face)
                (org-footnote :foreground ,ctp-mauve)
@@ -985,14 +985,14 @@ If called non-interactively, the FLAVOR must be one of 'frappe, 'latte, 'macchia
                (org-hide :foreground ,ctp-crust :background ,ctp-base)
                (org-indent :foreground ,ctp-base)
                (org-level-1 :inherit bold :foreground ,ctp-red
-                            ,@(when catppuccin-enlarge-headings
-                                (list :height catppuccin-height-title-1)))
+                            ,@(when cyberdream-enlarge-headings
+                                (list :height cyberdream-height-title-1)))
                (org-level-2 :inherit bold :foreground ,ctp-peach
-                            ,@(when catppuccin-enlarge-headings
-                                (list :height catppuccin-height-title-2)))
+                            ,@(when cyberdream-enlarge-headings
+                                (list :height cyberdream-height-title-2)))
                (org-level-3 :weight normal :foreground ,ctp-yellow
-                            ,@(when catppuccin-enlarge-headings
-                                (list :height catppuccin-height-title-3)))
+                            ,@(when cyberdream-enlarge-headings
+                                (list :height cyberdream-height-title-3)))
                (org-level-4 :weight normal :foreground ,ctp-green)
                (org-level-5 :weight normal :foreground ,ctp-sapphire)
                (org-level-6 :weight normal :foreground ,ctp-lavender)
@@ -1074,7 +1074,7 @@ If called non-interactively, the FLAVOR must be one of 'frappe, 'latte, 'macchia
                ;; show-paren
                (show-paren-match :foreground ,ctp-pink
                                  :weight bold
-                                 ,@(when catppuccin-highlight-matches
+                                 ,@(when cyberdream-highlight-matches
                                      (list :background ctp-surface0)))
                (show-paren-match-expression :inherit match)
                (show-paren-mismatch :inherit warning)
@@ -1117,10 +1117,10 @@ If called non-interactively, the FLAVOR must be one of 'frappe, 'latte, 'macchia
                (centaur-tabs-modified-marker-unselected :inherit centaur-tabs-unselected-modified)
                ;; term
                (term :foreground ,ctp-text :background ,ctp-base)
-               (term-color-black ,@(if (eq catppuccin-flavor 'latte)
+               (term-color-black ,@(if (eq cyberdream-flavor 'latte)
                                        (list :foreground ctp-subtext1  :background ctp-subtext1)
                                      (list :foreground ctp-surface1 :background ctp-surface1)))
-               (term-color-black-white ,@(if (eq catppuccin-flavor 'latte)
+               (term-color-black-white ,@(if (eq cyberdream-flavor 'latte)
                                              (list :foreground ctp-subtext0 :background ctp-subtext0)
                                            (list :foreground ctp-surface2 :background ctp-surface2)))
                (term-color-red :foreground ,ctp-red :background ,ctp-red)
@@ -1135,10 +1135,10 @@ If called non-interactively, the FLAVOR must be one of 'frappe, 'latte, 'macchia
                (term-color-bright-magenta :foreground ,ctp-pink :background ,ctp-pink)
                (term-color-cyan :foreground ,ctp-teal :background ,ctp-teal)
                (term-color-bright-cyan :foreground ,ctp-teal :background ,ctp-teal)
-               (term-color-white ,@(if (eq catppuccin-flavor 'latte)
+               (term-color-white ,@(if (eq cyberdream-flavor 'latte)
                                        (list :foreground ctp-surface2  :background ctp-surface2)
                                      (list :foreground ctp-subtext1 :background ctp-subtext1)))
-               (term-color-bright-white ,@(if (eq catppuccin-flavor 'latte)
+               (term-color-bright-white ,@(if (eq cyberdream-flavor 'latte)
                                               (list :foreground ctp-surface1 :background ctp-surface1)
                                             (list :foreground ctp-subtext0 :background ctp-subtext0)))
 
@@ -1289,7 +1289,7 @@ If called non-interactively, the FLAVOR must be one of 'frappe, 'latte, 'macchia
                (circe-server-face :foreground ,ctp-blue :weight bold))))
 
   (apply #'custom-theme-set-faces
-         'catppuccin
+         'cyberdream
          (let* ((expand-with-func
                  (lambda (func spec)
                    (let (reduced-color-list)
@@ -1309,30 +1309,30 @@ If called non-interactively, the FLAVOR must be one of 'frappe, 'latte, 'macchia
            whole-theme))
 
   (apply #'custom-theme-set-variables
-         'catppuccin
+         'cyberdream
          (let ((get-func
                 (pcase (display-color-cells)
                   ((pred (<= 16777216)) 'car) ; fully graphical envs
                   (_ 'cadr))))                ; terminal withs 256 colors
            `((ansi-color-names-vector
-              [,(funcall get-func (alist-get (if (eq catppuccin-flavor 'latte) 'ctp-subtext1  'ctp-surface1) colors))
+              [,(funcall get-func (alist-get (if (eq cyberdream-flavor 'latte) 'ctp-subtext1  'ctp-surface1) colors))
                ,(funcall get-func (alist-get 'ctp-red colors))
                ,(funcall get-func (alist-get 'ctp-green colors))
                ,(funcall get-func (alist-get 'ctp-yellow colors))
                ,(funcall get-func (alist-get 'ctp-blue colors))
                ,(funcall get-func (alist-get 'ctp-pink colors))
                ,(funcall get-func (alist-get 'ctp-teal colors))
-               ,(funcall get-func (alist-get (if (eq catppuccin-flavor 'latte) 'ctp-surface2  'ctp-subtext1) colors))]))
+               ,(funcall get-func (alist-get (if (eq cyberdream-flavor 'latte) 'ctp-surface2  'ctp-subtext1) colors))]))
            `((rustic-ansi-faces
               (vector
-               ,(funcall get-func (alist-get (if (eq catppuccin-flavor 'latte) 'ctp-subtext1  'ctp-surface1) colors))
+               ,(funcall get-func (alist-get (if (eq cyberdream-flavor 'latte) 'ctp-subtext1  'ctp-surface1) colors))
                ,(funcall get-func (alist-get 'ctp-red colors))
                ,(funcall get-func (alist-get 'ctp-green colors))
                ,(funcall get-func (alist-get 'ctp-yellow colors))
                ,(funcall get-func (alist-get 'ctp-blue colors))
                ,(funcall get-func (alist-get 'ctp-pink colors))
                ,(funcall get-func (alist-get 'ctp-teal colors))
-               ,(funcall get-func (alist-get (if (eq catppuccin-flavor 'latte) 'ctp-surface2  'ctp-subtext1) colors))))))))
+               ,(funcall get-func (alist-get (if (eq cyberdream-flavor 'latte) 'ctp-surface2  'ctp-subtext1) colors))))))))
 
 
 
@@ -1342,15 +1342,15 @@ If called non-interactively, the FLAVOR must be one of 'frappe, 'latte, 'macchia
   (add-to-list 'custom-theme-load-path
                (file-name-as-directory (file-name-directory load-file-name))))
 
-(provide-theme 'catppuccin)
+(provide-theme 'cyberdream)
 
 ;; Unbind functions used for internal use
-(fmakunbound 'catppuccin-quantize-color)
-(fmakunbound 'catppuccin-lighten-color)
-(fmakunbound 'catppuccin-darken-color)
+(fmakunbound 'cyberdream-quantize-color)
+(fmakunbound 'cyberdream-lighten-color)
+(fmakunbound 'cyberdream-darken-color)
 
 ;; Local Variables:
 ;; indent-tabs-mode: nil
 ;; End:
 
-;;; catppuccin-theme.el ends here
+;;; cyberdream-theme.el ends here
